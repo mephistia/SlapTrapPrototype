@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Protótipo SlapTrap</title>
+        <script src="SlapTrap.js"></script>
+
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+
+
+
+
+
+    </head>
+
+    <body>
+        <div id="main">
+            <div id="opt"><i class="fas fa-cog greyIcon"></i></div>
+            <div id="topo">
+                <div id="logo"><img src="https://i.ibb.co/k8P41Qy/slaptraplogo.png" alt="Logo SlapTrap"></div>
+                <div class="separator"></div>
+            </div>
+
+            <div id="inimigo">
+                <div class="barraVida">
+                    <div class="vida" id="vidaInimigo">
+                            <div class="infoVida" id="infoInimigo"><i class="fas fa-heart"></i><span id="nomeInimigo">Beltrano</span><span id="vidaInimigoNum">100</span></div>
+                    </div>
+                </div>
+
+                <div class="cartasTrap">
+                    <div class="cartaVirada"></div>
+                    <div class="cartaVirada"></div>
+                    <div class="cartaVirada"></div>
+                </div>
+            </div>
+            
+            
+            <div id="mesaJogo">
+                <div id="contador">Contador: n</div>
+                <div id="cartaPilha" class="semCarta"></div>
+                <div class="cartaVirada baralho podeClicar"></div>
+            </div>
+
+            <div id="jogador">
+                <div class="cartasTrap">
+                    <div class="cartaJogador" id="carta1">Ambos atacam metade se o inimigo bater uma carta de Copas válida</div>
+                    <div class="cartaJogador" id="carta2">Você ataca o inimigo se ele bater uma carta Valete</div>
+                    <div class="cartaJogador" id="carta3">Você ataca normalmente se bater qualquer carta de Paus</div>
+                </div>
+                <div class="barraVida">
+                    <div class="vida" id="vidaJogador">
+                            <div class="infoVida" id="infoJogador"><i class="fas fa-heart"></i><span id="nomeJogador">Fulano</span><span id="vidaJogadorNum">100</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,202 @@
+* {
+    font-family: 'Bree Serif', serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.separator, .separatorFrase {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 0.8em;
+    font-size: 18pt;
+}
+.separator::before, .separator::after, .separatorFrase::before, .separatorFrase::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid #3A434B;
+}
+.separatorFrase::before {
+    margin-right: 10px;
+}
+.separatorFrase::after {
+    margin-left: 10px;
+}
+
+.greyIcon{
+    color: #3A434B;
+    background-color: white;
+    text-align: center;
+}
+#opt:hover, #opt:hover .greyIcon{
+    color: #56616b;
+    background-color: lightgray;
+}
+
+#main{
+    /* tudo centralizado */
+    height: 100%;
+    margin:  0 auto;
+    max-width: 650px;
+    background-color: #424B54;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+#topo {
+    padding-top: 0.5em;
+    width: 100%
+}
+
+#inimigo, #jogador, #mesaJogo{
+    width: 100%;
+    display: block;
+}
+
+
+
+/* divs internas: */
+
+#opt {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 100%;
+    width: 2em;
+    height: 2em;
+    background-color: white;
+    z-index: 9999;
+}
+
+
+#logo img{
+    max-height: 4em;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0px 4px 4px #222222);
+}
+
+
+.barraVida{
+    max-width: 70%;
+    height: 2.5em;
+    background-color: #305B65;
+    display: block;
+    margin: 1em auto;
+}
+
+.vida{
+    height: 100%;
+    background-color: #087E8B;
+    display: block;
+}
+
+/* editar porcentagem de vida = editar width */
+#vidaInimigo{
+    width: 100%;
+}
+
+#vidaJogador{
+    width: 100%;
+}
+
+.infoVida{
+    display: flex;
+}
+
+.infoVida span{
+    margin-top: 9.5px;
+    margin-left: 8px;
+    margin-right: 10px;
+}
+
+.infoVida i{
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+#nomeInimigo, #nomeJogador{
+    margin-right:auto;
+}
+
+.cartasTrap{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10px;
+}
+
+#mesaJogo{
+    display: flex;
+    justify-content: inherit;
+    flex-wrap: wrap;
+    align-items: center;;
+}
+
+.cartaVirada{
+    background-color: #FFA0A3;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 8px, #FF5A5F 8px, #FF5A5F 15px);
+    border: 5px solid #FF5A5F;
+    
+    width:  6.5em;
+    height: 9.5em;
+    margin: 20px 8px;
+    border-radius: 5%;
+    
+}
+
+.cartaVirada .baralho{
+    flex: 0 0 50%;
+}
+
+#contador{
+    margin: 5px auto;
+    text-align: center;
+    font-size: 16pt;
+    flex: 0 0 100%;
+}
+
+#cartaPilha, .cartaJogador, .cartaJogador span{
+    width:  6.5em;
+    height: 10em;
+    margin: 20px 8px;
+    border: 3px solid white;
+    background-color: white;
+    border-radius: 5%;
+    font-size: 11pt;
+    color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+}
+
+.semCarta{
+    opacity: 15%;
+}
+
+
+.podeClicar:hover{
+    opacity: 70%;
+}
+
+.podeClicar{
+    width: calc(6.5em + .6em);
+    height: calc(10em + .6em);
+    box-shadow: 0 0 2em #FF5A5F;
+    background-color: #ffabad;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 8px, #ff7d81 8px, #ff7d81 15px);
+    border-color: #ff7d81;
+}
+
+
