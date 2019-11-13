@@ -13,8 +13,8 @@ body{
     display: flex;
     align-items: center;
     text-align: center;
-    margin-left: 25vw;
-    margin-right: 25vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     margin-top: 1.5vh;
     font-size: 18pt;
 }
@@ -53,8 +53,7 @@ body{
 }
 
 #topo {
-    padding-top: 4%;
-    height: 13vh;;
+    padding: 5% 0;
 }
 
 #inimigo, #jogador, #mesaJogo{
@@ -62,15 +61,18 @@ body{
     display: block;
 }
 
-#inimigo{
-    height: 25vh;
-}
 
 #jogador{
     position: absolute;
     bottom: 2%;
 }
 
+#jogador, #inimigo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6vw;
+}
 
 
 #opt {
@@ -95,17 +97,19 @@ body{
 
 
 .barraVida{
-    max-width: 70%;
-    height: 4vh;
+    width: 100%;
+    height: 8vh;
     background-color: #305B65;
     display: block;
-    margin: 2vw auto;
+    margin: 1vh;
+    border-radius: 5px;
+    
 }
 
 .vida{
-    height: 100%;
     background-color: #087E8B;
     display: block;
+    border-radius: 5px;
 }
 
 /* editar porcentagem de vida = editar width */
@@ -124,7 +128,7 @@ body{
 }
 
 .infoVida > *{
-    margin:1vh;
+    margin: 1.5vh;
     font-size: calc(11pt + 0.4vh);
 
 }
@@ -138,29 +142,47 @@ body{
 .cartasTrap{
     display: flex;
     justify-content: center;
-    margin: auto;
     text-align: center;
+    padding-left: 25px;
 }
 
 #mesaJogo{
     text-align: center;
-    margin-top: 3vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
 }
 
-.cartaVirada{
+#inimTrap1, #carta1{
+    transform: rotate(-15deg);
+}
+
+#inimTrap2, #carta2{
+    z-index: 9;
+}
+
+#inimTrap3, #carta3{
+    transform: rotate(15deg);
+    z-index: 99;
+
+}
+
+.cartaVirada, .baralho{
     background-color: #FFA0A3;
     background-image: repeating-linear-gradient(45deg, transparent, transparent 8px, #FF5A5F 8px, #FF5A5F 15px);
     border: 5px solid #FF5A5F;
     
-    width: 11vh;
-    height: 15vh;
-    margin: 2vh 2vw;
+    width: 20vh;
+    height: 28vh;
+    /*margin: 2vh 2vw;*/
     border-radius: 5%;
     display: inline-block;
 }
 
-.cartaVirada .baralho{
+.baralho{
     flex: 0 0 50%;
+    margin: 2vh 2vw;
 }
 
 #contador{
@@ -168,10 +190,17 @@ body{
     font-size: calc(13pt + 1vh);
 }
 
+.cartaVirada, .cartaJogador{
+    box-shadow: 0 0 10px #000;
+    width: 4vh!important;
+    height: 6vh!important;
+    margin: 0 0 0 -25%!important;
+}
+
 
 #cartaPilha, .cartaJogador, .cartaJogador span{
-    width: 11vh;
-    height: 15vh;
+    width: 20vh;
+    height: 28vh;
     margin: 2vh 2vw;
     border: 3px solid white;
     background-color: white;
@@ -183,10 +212,13 @@ body{
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #cartaPilha, .baralho{
     display: inline-block;
+    max-width: 145px;
+    max-height: 210px;
 }
 
 .semCarta{
